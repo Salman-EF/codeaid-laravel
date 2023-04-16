@@ -1,0 +1,176 @@
+{
+	"info": {
+		"_postman_id": "7387f6cd-8d7c-491c-a7fa-1b36a596e29e",
+		"name": "player-team-generator",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "5067874"
+	},
+	"item": [
+		{
+			"name": "store",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"salman forward 1\",\n    \"position\": \"forward\",\n    \"playerSkills\": [\n        {\n            \"skill\": \"attack\",\n            \"value\": \"60\"\n        },\n        {\n            \"skill\": \"speed\",\n            \"value\": 80\n        }\n    ]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/player",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"player"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "best team",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "[\n    {\n        \"position\": \"forward\",\n        \"mainSkill\": \"attack\",\n        \"numberOfPlayers\": 1\n    }\n ]",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/team/process",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"team",
+						"process"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"salman forward 5\",\n    \"position\": \"forward\",\n    \"playerSkills\": [\n        {\n            \"skill\": \"attacssk\",\n            \"value\": 60\n        },\n        {\n            \"skill\": \"speed\",\n            \"value\": 100\n        }\n    ]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/player/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"player",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer SkFabTZibXE1aE14ckpQUUxHc2dnQ2RzdlFRTTM2NFE2cGI4d3RQNjZmdEFITmdBQkE=",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"salman\",\n    \"position\": \"forward\",\n    \"playerSkills\": [\n        {\n            \"skill\": \"attack\",\n            \"value\": 90\n        },\n        {\n            \"skill\": \"speed\",\n            \"value\": 80\n        }\n    ]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/player/17",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"player",
+						"17"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "show",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/player/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"player",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "index",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/api/player",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"player"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
